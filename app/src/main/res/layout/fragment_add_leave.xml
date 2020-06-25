@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.AddLeaveFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="3dp"
+                android:src="@drawable/profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmpName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/myriad_pro_semibold"
+                    android:textColor="@color/blackColor"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="16sp"
+                    android:paddingRight="5dp"
+                    android:text="Anmol Shirke" />
+
+                <TextView
+                    android:id="@+id/tvEmpDesg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sofiapro_light"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone"
+                    android:paddingBottom="5dp"
+                    android:text="Developer" />
+
+                <TextView
+                    android:id="@+id/tv_balanceLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableLeft="@drawable/ic_view"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/myriad_pro_semibold"
+                    android:text="View Balance Leave"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/boarderLine"
+            tools:ignore="NotSibling" />
+
+        <Spinner
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:id="@+id/spType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFullday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:text="Full day" />
+
+            <RadioButton
+                android:id="@+id/rbHalfDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:text="Half Day"/>
+
+        </RadioGroup>
+
+            <EditText
+                android:id="@+id/edFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_date_blue"
+                android:drawablePadding="10dp"
+                android:editable="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:hint="From Date"
+                android:inputType="none"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/tvFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/edToDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_date_blue"
+                android:drawablePadding="10dp"
+                android:editable="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:hint="To Date"
+                android:inputType="none"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tvToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/edTotalDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:drawableLeft="@drawable/ic_refresh"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/myriad_pro_regular"
+                android:hint="No of days"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:inputType="none"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+
+
+            <EditText
+                android:id="@+id/edWeeklyOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:fontFamily="@font/sofiapro_light"
+                android:hint="Excluding weekly off*"
+                android:inputType="none"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:fontFamily="@font/sofiapro_light"
+                android:hint="Remark"
+                android:drawableLeft="@drawable/ic_check"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="5"
+                android:padding="15dp"
+                android:singleLine="false" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDocUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/myriad_pro_semibold"
+                android:textColor="@color/blackColor"
+                android:textStyle="bold"
+                android:text="Select Document" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvBrowse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_button"
+                    android:padding="8dp"
+                    android:text="Browse"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvFileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/myriad_pro_semibold"
+            android:text="Apply"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+    <!--    android:background="@drawable/button_background"-->
+</ScrollView>

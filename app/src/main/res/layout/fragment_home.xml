@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvLeaveAppPend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
+                app:cardCornerRadius="8dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_user"
+                                android:drawablePadding="10dp"
+                                android:text="Leave Approval Pending"
+                                android:textColor="@color/blackColor"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvHome_leaveAppPendingCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:layout_weight="2"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/redColor"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvClaimAppPend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_my_approve"
+                                android:drawablePadding="10dp"
+                                android:text="Claim Approval Pending"
+                                android:textColor="@color/blackColor"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvHome_claimAppPendingCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:layout_weight="2"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/redColor"
+                                android:textSize="20sp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMyLeavePend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="8dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp">
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_replace"
+                                android:drawablePadding="10dp"
+                                android:text="My Leave Pending"
+                                android:textColor="@color/blackColor"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvHome_leavePendingCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:layout_weight="2"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/redColor"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+<!--                </LinearLayout>-->
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMyClaimPend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_my_pending"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="My Claim Pending"
+                                android:textColor="@color/blackColor"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvHome_claimPendingCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/myriad_pro_semibold"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:layout_weight="2"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/redColor"
+                                android:textSize="20sp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="@dimen/fab_margin"-->
+<!--        android:layout_marginBottom="100dp"-->
+<!--        android:clickable="true"-->
+<!--        android:visibility="invisible"-->
+<!--        app:srcCompat="@drawable/ic_fab_leave" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fab1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="88dp"-->
+<!--        android:layout_marginBottom="186dp"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="Add Leave"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:visibility="gone" />-->
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fabClaim"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginRight="100dp"-->
+<!--        android:layout_marginBottom="@dimen/fab_margin"-->
+<!--        android:clickable="true"-->
+<!--        android:visibility="invisible"-->
+<!--        app:srcCompat="@drawable/ic_fab_claim" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fab2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="88dp"-->
+<!--        android:layout_marginBottom="116dp"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="Add Claim"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="@dimen/fab_margin"-->
+<!--        android:visibility="gone"-->
+<!--        app:srcCompat="@drawable/ic_fab_add"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fabLeave"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="@dimen/fab_margin"-->
+<!--        android:visibility="visible"-->
+<!--        app:srcCompat="@drawable/ic_fab_add"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="100dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_fab_leave" />
+
+    <TextView
+        android:id="@+id/tv_fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="186dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="Add Leave"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabClaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_fab_claim" />
+
+    <TextView
+        android:id="@+id/tv_fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="116dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="Add Claim"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_fab_add"
+        tools:ignore="VectorDrawableCompat" />
+
+
+
+</RelativeLayout>

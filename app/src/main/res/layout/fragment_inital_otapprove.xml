@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.EmployeeListFragment">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_date_blue"
+                android:drawablePadding="5dp"
+                android:hint="Select Date"
+                android:inputType="none"
+                android:cursorVisible="false"
+                android:windowSoftInputMode="stateHidden"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="15dp"
+                android:editable="false"
+                android:fontFamily="@font/myriad_pro_semibold"
+                />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_weight="3"
+            android:fontFamily="@font/sofiapro_bold"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="Search"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/llHeader"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corner_button"
+        android:fontFamily="@font/myriad_pro_semibold"
+        android:text="Approve"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_user"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_add_leave"
+            android:icon="@drawable/ic_add"
+            android:title="Add Leave" />
+        <item
+            android:id="@+id/nav_add_claim"
+            android:icon="@drawable/ic_menu_add_claim"
+            android:title="Add Claim"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/nav_init_ot"
+            android:icon="@drawable/ic_over_time"
+            android:title="Initial OT Approve"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/nav_final_ot"
+            android:icon="@drawable/ic_over_time"
+            android:title="Final OT Approve"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/nav_patlist"
+            android:icon="@drawable/ic_my_payslip"
+            android:title="Download Payslip"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/nav_change_pass"
+            android:icon="@drawable/ic_lock"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+
+
+
+</menu>
